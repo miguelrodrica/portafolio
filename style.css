@@ -24,6 +24,8 @@ body {
   text-decoration: none;
   border-radius: 12px;
   font-family: sans-serif;
+  display: inline-block;
+  width: 200px;
 }
 
 .projects-container {
