@@ -25,3 +25,9 @@ body {
   border-radius: 12px;
   font-family: sans-serif;
 }
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
