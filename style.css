@@ -3,7 +3,6 @@ body {
   font-family: sans-serif;
   color: white;
   text-align: center;
-  text-justify: center;
 }
 
 .button-menu {
@@ -18,20 +17,18 @@ body {
 
 .button-projects {
   background-color: #9EECFF;
-  border: none;
   color: black;
   padding: 12px;
   text-decoration: none;
-  font-family: sans-serif;
-  display: center;
   border-radius: 12px;
-  font-family: sans-serif;
   display: block;
   width: 200px;
-}
+  margin: 0 auto;
+  }
 
 .projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
