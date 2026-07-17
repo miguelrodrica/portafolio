@@ -1,20 +1,23 @@
 /* ==========================================================================
    Miguel Rodrica — Portfolio Landing Page
    HTML5 + CSS3 only. No frameworks, no JavaScript.
+   Dark theme.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
    1. Design tokens
    -------------------------------------------------------------------------- */
 :root {
-  /* Colors */
-  --color-white: #FFFFFF;
-  --color-light-gray: #F5F5F5;
-  --color-dark-gray: #1F2937;
-  --color-blue: #2563EB;
-  --color-blue-dark: #1E40AF;
-  --color-text-muted: #4B5563;
-  --color-border: #E5E7EB;
+  /* Colors — dark neutral palette */
+  --color-bg: #0B1220;           /* page background */
+  --color-surface: #1F2937;      /* cards, header, skip-link */
+  --color-surface-alt: #141B29;  /* alternating section background */
+  --color-white: #FFFFFF;        /* text on solid blue buttons */
+  --color-text: #F5F5F5;         /* primary text */
+  --color-text-muted: #94A3B8;   /* secondary text */
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-blue: #3B82F6;
+  --color-blue-hover: #60A5FA;
 
   /* Typography */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -50,8 +53,8 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
-  color: var(--color-dark-gray);
-  background-color: var(--color-white);
+  color: var(--color-text);
+  background-color: var(--color-bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -100,8 +103,8 @@ button:focus-visible {
   position: absolute;
   left: -999px;
   top: auto;
-  background: var(--color-dark-gray);
-  color: var(--color-white);
+  background: var(--color-surface);
+  color: var(--color-text);
   padding: var(--space-xs) var(--space-sm);
   z-index: 100;
 }
@@ -157,18 +160,18 @@ section h2 {
   color: var(--color-white);
 }
 .btn-primary:hover {
-  background-color: var(--color-blue-dark);
+  background-color: var(--color-blue-hover);
   transform: translateY(-2px);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--color-dark-gray);
-  border-color: var(--color-dark-gray);
+  color: var(--color-text);
+  border-color: var(--color-text);
 }
 .btn-secondary:hover {
-  background-color: var(--color-dark-gray);
-  color: var(--color-white);
+  background-color: var(--color-text);
+  color: var(--color-bg);
   transform: translateY(-2px);
 }
 
@@ -191,7 +194,7 @@ section h2 {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(11, 18, 32, 0.85);
   backdrop-filter: saturate(180%) blur(6px);
   border-bottom: 1px solid var(--color-border);
 }
@@ -208,6 +211,7 @@ section h2 {
   font-weight: 700;
   font-size: 1.05rem;
   letter-spacing: -0.01em;
+  color: var(--color-text);
 }
 .logo-dot {
   color: var(--color-blue);
@@ -239,7 +243,7 @@ section h2 {
 }
 
 .main-nav a:hover {
-  color: var(--color-dark-gray);
+  color: var(--color-text);
 }
 .main-nav a:hover::after {
   width: 100%;
@@ -276,12 +280,13 @@ section h2 {
   letter-spacing: -0.02em;
   line-height: 1.1;
   margin-bottom: var(--space-sm);
+  color: var(--color-text);
 }
 
 .hero-title {
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--color-blue);
+  color: var(--color-blue-hover);
   margin-bottom: var(--space-md);
 }
 
@@ -306,7 +311,7 @@ section h2 {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background-color: var(--color-light-gray);
+  background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   display: flex;
   align-items: center;
@@ -343,7 +348,7 @@ section h2 {
 }
 
 .strength-card {
-  background-color: var(--color-light-gray);
+  background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-md);
@@ -353,7 +358,7 @@ section h2 {
 .strength-card:hover {
   transform: translateY(-3px);
   border-color: var(--color-blue);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.08);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
 }
 
 .strength-icon {
@@ -366,6 +371,7 @@ section h2 {
 .strength-card h3 {
   font-size: 0.95rem;
   font-weight: 600;
+  color: var(--color-text);
 }
 
 /* --------------------------------------------------------------------------
@@ -373,7 +379,7 @@ section h2 {
    -------------------------------------------------------------------------- */
 .skills {
   padding: var(--space-2xl) 0;
-  background-color: var(--color-light-gray);
+  background-color: var(--color-surface-alt);
 }
 
 .skills-grid {
@@ -383,7 +389,7 @@ section h2 {
 }
 
 .skill-category {
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-lg);
@@ -394,7 +400,7 @@ section h2 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--color-blue);
+  color: var(--color-blue-hover);
   margin-bottom: var(--space-md);
 }
 
@@ -402,6 +408,7 @@ section h2 {
   padding: 0.6rem 0;
   border-top: 1px solid var(--color-border);
   font-size: 0.95rem;
+  color: var(--color-text);
   transition: color var(--transition-fast), padding-left var(--transition-fast);
 }
 
@@ -410,7 +417,7 @@ section h2 {
 }
 
 .skill-list li:hover {
-  color: var(--color-blue);
+  color: var(--color-blue-hover);
   padding-left: 6px;
 }
 
@@ -428,6 +435,7 @@ section h2 {
 }
 
 .project-card {
+  background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -438,12 +446,12 @@ section h2 {
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(31, 41, 55, 0.1);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
 }
 
 .project-image {
   aspect-ratio: 16 / 10;
-  background-color: var(--color-light-gray);
+  background-color: var(--color-surface-alt);
   background-image:
     linear-gradient(135deg, var(--color-border) 25%, transparent 25%),
     linear-gradient(225deg, var(--color-border) 25%, transparent 25%);
@@ -461,6 +469,7 @@ section h2 {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: var(--space-xs);
+  color: var(--color-text);
 }
 
 .project-body p {
@@ -480,8 +489,8 @@ section h2 {
 .tech-tags li {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  background-color: var(--color-light-gray);
-  color: var(--color-dark-gray);
+  background-color: var(--color-surface-alt);
+  color: var(--color-text);
   padding: 0.25rem 0.6rem;
   border-radius: 4px;
 }
@@ -491,7 +500,7 @@ section h2 {
    -------------------------------------------------------------------------- */
 .certifications {
   padding: var(--space-2xl) 0;
-  background-color: var(--color-light-gray);
+  background-color: var(--color-surface-alt);
 }
 
 .certifications-grid {
@@ -501,7 +510,7 @@ section h2 {
 }
 
 .cert-card {
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-lg);
@@ -519,7 +528,7 @@ section h2 {
   height: 64px;
   margin: 0 auto var(--space-sm);
   border-radius: 50%;
-  background-color: var(--color-light-gray);
+  background-color: var(--color-surface-alt);
   border: 1px dashed var(--color-border);
   display: flex;
   align-items: center;
@@ -527,13 +536,14 @@ section h2 {
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 0.8rem;
-  color: var(--color-blue);
+  color: var(--color-blue-hover);
 }
 
 .cert-card h3 {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: var(--space-xs);
+  color: var(--color-text);
 }
 
 .cert-card p {
@@ -551,6 +561,7 @@ section h2 {
 
 .contact-inner {
   max-width: 560px;
+  margin: 0 auto;
 }
 
 .contact .eyebrow,
@@ -580,20 +591,21 @@ section h2 {
   border-radius: var(--radius-sm);
   font-weight: 600;
   font-size: 0.92rem;
+  color: var(--color-text);
   transition: border-color var(--transition-fast), color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .contact-link:hover {
   border-color: var(--color-blue);
-  color: var(--color-blue);
-  background-color: rgba(37, 99, 235, 0.05);
+  color: var(--color-blue-hover);
+  background-color: rgba(59, 130, 246, 0.12);
 }
 
 .contact-icon {
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 0.85rem;
-  color: var(--color-blue);
+  color: var(--color-blue-hover);
 }
 
 .contact-website {
