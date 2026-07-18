@@ -136,7 +136,7 @@ section h2 {
 }
 
 .btn-outline-paper {
-  background-color: rgba(24, 45, 58, 0.25);
+  background-color: rgba(24, 45, 58, 0.50);
   border: 1px solid var(--hairline);
   color: var(--paper);
   font-weight: 600;
@@ -145,7 +145,7 @@ section h2 {
   transition: border-color 0.18s ease, transform 0.18s ease;
 }
 .btn-outline-paper:hover {
-  background-color: rgba(24, 45, 58, 0.25);
+  background-color: rgba(24, 45, 58, 0.50);
   border-color: var(--brass);
   color: var(--paper);
   transform: translateY(-2px);
@@ -338,16 +338,19 @@ section h2 {
 .skill-card{
     height: 100%;
     padding: 2rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    transition: .25s ease;
+    background: black;
+    border: 1px solid var(--hairline);
+    border-radius: 2px;
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background-color .2s ease;
 }
 
 .skill-card:hover{
-    transform: translateY(-6px);
-    border-color: var(--accent);
-    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+    background: rgba(24, 45, 58, 0.50);
+    border-color: var(--brass);
+    transform: translateY(-4px);
 }
 
 .skill-icon{
@@ -369,8 +372,8 @@ section h2 {
 
 .skill-list{
     display: flex;
-    flex-wrap: wrap;
-    gap: .6rem;
+    flex-direction: column;
+    gap: .8rem;
 }
 
 .ticker-group {
