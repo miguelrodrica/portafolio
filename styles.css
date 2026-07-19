@@ -271,7 +271,7 @@ section h2 {
 /* --------------------------------------------------------------------------
    7. About
    -------------------------------------------------------------------------- */
-.about { padding: 5rem 0; }
+.about { padding: 4rem 0; }
 
 .photo-frame {
   position: relative;
@@ -332,7 +332,7 @@ section h2 {
    8. Skills — grupos + fichas tipo "ticker"
    -------------------------------------------------------------------------- */
 .skills{
-    padding: 100px 0;
+    padding: 64px 0;
 }
 
 .skill-card{
@@ -419,7 +419,7 @@ section h2 {
 /* --------------------------------------------------------------------------
    9. Proceso — pasos numerados (secuencia real, numeración justificada)
    -------------------------------------------------------------------------- */
-.process { padding: 4.5rem 0 5.5rem; }
+.process { padding: 4rem 0 4rem; }
 
 .process-flow {
   display: flex;
