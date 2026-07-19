@@ -333,6 +333,8 @@ section h2 {
    -------------------------------------------------------------------------- */
 .skills{
     padding: 64px 0;
+    background-image: radial-gradient(var(--hairline-soft) 1px, transparent 1px);
+    background-size: 30px 30px;
 }
 
 .skill-card{
